@@ -7,19 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0DDEFF40287C9809002050C4 /* PopularCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDEFF3F287C9809002050C4 /* PopularCollectionViewCell.swift */; };
+		0DDEFF42287C9868002050C4 /* NowPlayingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDEFF41287C9868002050C4 /* NowPlayingCollectionViewCell.swift */; };
+		0DDEFF44287C989F002050C4 /* UpcomingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DDEFF43287C989F002050C4 /* UpcomingCollectionViewCell.swift */; };
 		0DF495752874AEBC0025EC5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF495742874AEBC0025EC5B /* AppDelegate.swift */; };
 		0DF495772874AEBC0025EC5B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF495762874AEBC0025EC5B /* SceneDelegate.swift */; };
-		0DF495792874AEBC0025EC5B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF495782874AEBC0025EC5B /* ViewController.swift */; };
+		0DF495792874AEBC0025EC5B /* FeaturedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF495782874AEBC0025EC5B /* FeaturedViewController.swift */; };
 		0DF4957C2874AEBC0025EC5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DF4957A2874AEBC0025EC5B /* Main.storyboard */; };
 		0DF4957E2874AEBD0025EC5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DF4957D2874AEBD0025EC5B /* Assets.xcassets */; };
 		0DF495812874AEBD0025EC5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DF4957F2874AEBD0025EC5B /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0DDEFF3F287C9809002050C4 /* PopularCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCollectionViewCell.swift; sourceTree = "<group>"; };
+		0DDEFF41287C9868002050C4 /* NowPlayingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingCollectionViewCell.swift; sourceTree = "<group>"; };
+		0DDEFF43287C989F002050C4 /* UpcomingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingCollectionViewCell.swift; sourceTree = "<group>"; };
 		0DF495712874AEBC0025EC5B /* ChallengeTriunfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChallengeTriunfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DF495742874AEBC0025EC5B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DF495762874AEBC0025EC5B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0DF495782874AEBC0025EC5B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0DF495782874AEBC0025EC5B /* FeaturedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedViewController.swift; sourceTree = "<group>"; };
 		0DF4957B2874AEBC0025EC5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0DF4957D2874AEBD0025EC5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0DF495802874AEBD0025EC5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +43,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D66211E287C9E16006EC6E1 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				0DF4957D2874AEBD0025EC5B /* Assets.xcassets */,
+				0DF495822874AEBD0025EC5B /* Info.plist */,
+			);
+			name = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		0DDEFF45287C99BB002050C4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0DF495782874AEBC0025EC5B /* FeaturedViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		0DDEFF47287C99F7002050C4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0DF4957A2874AEBC0025EC5B /* Main.storyboard */,
+				0DF4957F2874AEBD0025EC5B /* LaunchScreen.storyboard */,
+				0DDEFF3F287C9809002050C4 /* PopularCollectionViewCell.swift */,
+				0DDEFF41287C9868002050C4 /* NowPlayingCollectionViewCell.swift */,
+				0DDEFF43287C989F002050C4 /* UpcomingCollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		0DF495682874AEBC0025EC5B = {
 			isa = PBXGroup;
 			children = (
@@ -58,11 +93,9 @@
 			children = (
 				0DF495742874AEBC0025EC5B /* AppDelegate.swift */,
 				0DF495762874AEBC0025EC5B /* SceneDelegate.swift */,
-				0DF495782874AEBC0025EC5B /* ViewController.swift */,
-				0DF4957A2874AEBC0025EC5B /* Main.storyboard */,
-				0DF4957D2874AEBD0025EC5B /* Assets.xcassets */,
-				0DF4957F2874AEBD0025EC5B /* LaunchScreen.storyboard */,
-				0DF495822874AEBD0025EC5B /* Info.plist */,
+				0DDEFF45287C99BB002050C4 /* Controllers */,
+				0DDEFF47287C99F7002050C4 /* View */,
+				0D66211E287C9E16006EC6E1 /* SupportingFiles */,
 			);
 			path = ChallengeTriunfo;
 			sourceTree = "<group>";
@@ -138,7 +171,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DF495792874AEBC0025EC5B /* ViewController.swift in Sources */,
+				0DDEFF44287C989F002050C4 /* UpcomingCollectionViewCell.swift in Sources */,
+				0DDEFF42287C9868002050C4 /* NowPlayingCollectionViewCell.swift in Sources */,
+				0DDEFF40287C9809002050C4 /* PopularCollectionViewCell.swift in Sources */,
+				0DF495792874AEBC0025EC5B /* FeaturedViewController.swift in Sources */,
 				0DF495752874AEBC0025EC5B /* AppDelegate.swift in Sources */,
 				0DF495772874AEBC0025EC5B /* SceneDelegate.swift in Sources */,
 			);
