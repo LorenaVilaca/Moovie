@@ -24,8 +24,19 @@ class FeaturedViewController: UIViewController{
         popularCollectionView.dataSource = self
         nowPlayingCollectionView.dataSource = self
         upcomingCollectionView.dataSource = self
+        
+        popularCollectionView.delegate = self
+        nowPlayingCollectionView.delegate = self
+        upcomingCollectionView.delegate = self
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //passar o filme adiante para a proxima tela
+        if let destination = segue.destination as? DetailsViewController{
+            let movie = sender as? Movie
+            destination.movie = movie
+        }
+    }
 }
 
 
