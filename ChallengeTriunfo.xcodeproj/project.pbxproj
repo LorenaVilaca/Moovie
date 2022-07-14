@@ -127,8 +127,8 @@
 			children = (
 				0DF495742874AEBC0025EC5B /* AppDelegate.swift */,
 				0DF495762874AEBC0025EC5B /* SceneDelegate.swift */,
-				0DDEFF45287C99BB002050C4 /* Controllers */,
 				0D5A4757287DEDF2009C1325 /* Model */,
+				0DDEFF45287C99BB002050C4 /* Controllers */,
 				0DDEFF47287C99F7002050C4 /* View */,
 				0D66211E287C9E16006EC6E1 /* SupportingFiles */,
 			);
