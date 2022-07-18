@@ -23,13 +23,61 @@ extension Movie {
         
         do {
             let (data, response) = try await session.data(from: components.url!)
-        
+            
             let decoder = JSONDecoder ()
             decoder.keyDecodingStrategy = .convertFromSnakeCase
             let movieResult = try decoder.decode(MoviesResponse.self, from: data)
             
             return movieResult.results
             
+        } catch {
+            print(error)
+        }
+        return []
+    }
+    
+    //Download de now playing
+    static func nowPlayingMoviesAPI () async -> [Movie] {
+        var components = Movie.urlComponents
+        components.path = "/3/movie/now_playing"
+        components.queryItems = [
+            URLQueryItem(name: "api_key", value: Movie.apiKey)
+        ]
+        
+        let sessions = URLSession.shared
+        
+        do {
+            let (data, response) = try await sessions.data(from: components.url!)
+            
+            let decoder = JSONDecoder ()
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
+            let movieResult = try decoder.decode(MoviesResponse.self, from: data)
+            
+            return movieResult.results
+        } catch {
+            print(error)
+        }
+        return []
+    }
+    
+    //Download de Upcoming
+    static func upcomingMoviesAPI () async -> [Movie] {
+        var components = Movie.urlComponents
+        components.path = "/3/movie/upcoming"
+        components.queryItems = [
+            URLQueryItem(name: "api_key", value: Movie.apiKey)
+        ]
+        
+        let sessions = URLSession.shared
+        
+        do {
+            let (data, response) = try await sessions.data(from: components.url!)
+            
+            let decoder = JSONDecoder ()
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
+            let movieResult = try decoder.decode(MoviesResponse.self, from: data)
+            
+            return movieResult.results
         } catch {
             print(error)
         }
