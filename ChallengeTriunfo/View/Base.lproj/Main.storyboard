@@ -423,6 +423,15 @@
                                                             <constraint firstAttribute="width" secondItem="3n3-NA-kI3" secondAttribute="height" multiplier="125:193" id="mLR-DK-V09"/>
                                                         </constraints>
                                                     </imageView>
+                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cbX-TS-8Hf" userLabel="imageButton">
+                                                        <rect key="frame" x="16" y="8" width="124" height="192"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain"/>
+                                                        <connections>
+                                                            <segue destination="34N-ZD-v9R" kind="show" id="lVO-Oa-d2r"/>
+                                                        </connections>
+                                                    </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
@@ -493,9 +502,7 @@
                             <constraint firstItem="Rjq-XH-QtN" firstAttribute="trailing" secondItem="ma4-VS-Ikz" secondAttribute="trailing" id="xBd-Mc-9vM"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="BIj-yg-Rxq">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="pwC-uX-ULW"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="BIj-yg-Rxq"/>
                     <size key="freeformSize" width="414" height="1341"/>
                     <connections>
                         <outlet property="backdropImage" destination="zXf-Rt-kCG" id="heu-MN-etF"/>
@@ -508,6 +515,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9ug-1b-riN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1860.8" y="242.73399014778326"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="zwM-aZ-6Dr">
+            <objects>
+                <viewController id="34N-ZD-v9R" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ANC-FN-bmG">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fmx-cn-txM">
+                                <rect key="frame" x="0.0" y="112" width="375" height="700"/>
+                                <color key="backgroundColor" red="0.70196078429999997" green="0.70196078429999997" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pzb-Ih-ZmQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Fmx-cn-txM" firstAttribute="trailing" secondItem="pzb-Ih-ZmQ" secondAttribute="trailing" id="HzW-bj-Rhm"/>
+                            <constraint firstAttribute="bottom" secondItem="Fmx-cn-txM" secondAttribute="bottom" id="Lrm-tZ-6IX"/>
+                            <constraint firstItem="Fmx-cn-txM" firstAttribute="top" secondItem="pzb-Ih-ZmQ" secondAttribute="top" constant="24" id="Uay-ww-ISD"/>
+                            <constraint firstItem="Fmx-cn-txM" firstAttribute="leading" secondItem="pzb-Ih-ZmQ" secondAttribute="leading" id="wWs-ol-Fj5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="fqu-Lx-DCO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="32A-4b-qrm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2965.5999999999999" y="116.74876847290641"/>
         </scene>
         <!--Featured-->
         <scene sceneID="RhE-cH-k2f">
