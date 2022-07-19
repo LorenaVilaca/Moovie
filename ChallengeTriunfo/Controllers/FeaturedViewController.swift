@@ -47,9 +47,9 @@ class FeaturedViewController: UIViewController{
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //passar o filme adiante para a proxima tela
-        if let destination = segue.destination as? DetailsViewController{
+        if let detailsViewController = segue.destination as? DetailsViewController{
             let movie = sender as? Movie
-            destination.movie = movie
+            detailsViewController.movie = movie
         }
     }
 }

@@ -17,6 +17,10 @@ class DetailsViewController: UIViewController {
     @IBOutlet var ratingLabel: UILabel!
     @IBOutlet var overviewLabel: UILabel!
     
+    @IBAction func touchImageButton(_ sender: Any) {
+        self.performSegue(withIdentifier: "posterSegue", sender: movie)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -43,6 +47,13 @@ class DetailsViewController: UIViewController {
         overviewLabel.text = movie.overview
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //passar o filme adiante para a proxima tela
+        if let destination = segue.destination as? PosterViewController{
+            let movie = sender as? Movie
+            destination.moviePoster = movie
+        }
+    }
 
     /*
     // MARK: - Navigation
