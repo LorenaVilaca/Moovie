@@ -18,7 +18,7 @@ class TrendingViewController: UIViewController {
     
     @IBAction func touchTrendingSegmentedControl(_ sender: Any) {
         if trendingSegmentedControl.selectedSegmentIndex == 0 {
-            self.trendingMovies = trendingTodayMovies
+            self.trendingMovies = self.trendingTodayMovies
             self.trendingTableView.reloadData()
         } else if trendingSegmentedControl.selectedSegmentIndex == 1{
             self.trendingMovies = self.trendingWeekMovies

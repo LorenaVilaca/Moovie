@@ -43,7 +43,8 @@ class DetailsViewController: UIViewController {
         }
         
         titleLabel.text = movie.title
-        ratingLabel.text = "Rating: \(movie.voteAverage)/10"
+        let votingFormed: Float = round(movie.voteAverage*10)/10
+        ratingLabel.text = "Rating: \(votingFormed)/10"
         overviewLabel.text = movie.overview
     }
     
