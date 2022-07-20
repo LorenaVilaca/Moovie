@@ -47,10 +47,40 @@ class FeaturedViewController: UIViewController{
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //passar o filme adiante para a proxima tela
-        if let detailsViewController = segue.destination as? DetailsViewController{
-            let movie = sender as? Movie
+        
+        if segue.identifier == "detailsSegue" {
+            guard let detailsViewController = segue.destination as? DetailsViewController else {
+                return
+            }
+            
+            guard let movie = sender as? Movie else {
+                return
+            }
             detailsViewController.movie = movie
+            
+            
+        } else if segue.identifier == "popularSeeAll" {
+            guard let seeAllViewController = segue.destination as? SeeAllViewController else {
+                return
+            }
+            seeAllViewController.seeAllMovies = popularMovies
+            seeAllViewController.title = "Popular"
+            
+        } else if segue.identifier == "nowPlayingSeeAll" {
+            guard let seeAllViewController = segue.destination as? SeeAllViewController else {
+                return
+            }
+            seeAllViewController.seeAllMovies = nowPlayingMovies
+            seeAllViewController.title = "Now Playing"
+            
+        } else {
+            guard let seeAllViewController = segue.destination as? SeeAllViewController else {
+                return
+            }
+            seeAllViewController.seeAllMovies = upcomingMovies
+            seeAllViewController.title = "Upcoming"
         }
+        
     }
 }
 

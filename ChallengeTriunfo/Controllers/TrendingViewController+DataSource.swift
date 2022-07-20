@@ -18,8 +18,6 @@ extension TrendingViewController: UITableViewDataSource {
     
     
     fileprivate func makeTrendingTable(_ indexPath: IndexPath) -> TrendingTableViewCell {
-        
-        
         let tableCell = trendingTableView.dequeueReusableCell(withIdentifier: TrendingTableViewCell.cellIdentifier, for: indexPath) as! TrendingTableViewCell
         
         tableCell.setup(title: trendingMovies[indexPath.item].title,

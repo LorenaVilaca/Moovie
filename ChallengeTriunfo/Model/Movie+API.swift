@@ -130,29 +130,6 @@ extension Movie {
         return []
     }
     
-//    static func seeAllMoviesAPI () async -> [Movie] {
-//        var components = Movie.urlComponents
-//        components.path = "/3/movie/popular"
-//        components.queryItems = [
-//            URLQueryItem(name: "api_key", value: Movie.apiKey)
-//        ]
-//        
-//        let sessions = URLSession.shared
-//        
-//        do {
-//            let (data, response) = try await sessions.data(from: components.url!)
-//            
-//            let decoder = JSONDecoder ()
-//            decoder.keyDecodingStrategy = .convertFromSnakeCase
-//            let movieResult = try decoder.decode(MoviesResponse.self, from: data)
-//            
-//            return movieResult.results
-//        } catch {
-//            print(error)
-//        }
-//        return []
-//    }
-    
     //Download de imagens
     static func downloadImageData (withPath: String) async -> Data {
         let urlString = "https://image.tmdb.org/t/p/w780\(withPath)"

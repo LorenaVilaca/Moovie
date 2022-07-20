@@ -13,18 +13,16 @@ class TrendingViewController: UIViewController {
     @IBOutlet var trendingSegmentedControl: UISegmentedControl!
     
     var trendingMovies: [Movie] = []
+    var trendingWeekMovies: [Movie] = []
+    var trendingTodayMovies: [Movie] = []
     
     @IBAction func touchTrendingSegmentedControl(_ sender: Any) {
         if trendingSegmentedControl.selectedSegmentIndex == 0 {
-            Task {
-                self.trendingMovies = await Movie.trendingDayMoviesAPI()
-                self.trendingTableView.reloadData()
-            }
-        } else {
-            Task {
-                self.trendingMovies = await Movie.trendingWeekMoviesAPI()
-                self.trendingTableView.reloadData()
-            }
+            self.trendingMovies = trendingTodayMovies
+            self.trendingTableView.reloadData()
+        } else if trendingSegmentedControl.selectedSegmentIndex == 1{
+            self.trendingMovies = self.trendingWeekMovies
+            self.trendingTableView.reloadData()
         }
     }
     override func viewDidLoad() {
@@ -34,7 +32,9 @@ class TrendingViewController: UIViewController {
         // Do any additional setup after loading the view.
     
         Task {
-            self.trendingMovies = await Movie.trendingDayMoviesAPI()
+            self.trendingTodayMovies = await Movie.trendingDayMoviesAPI()
+            self.trendingWeekMovies = await Movie.trendingWeekMoviesAPI()
+            self.trendingMovies = trendingTodayMovies
             self.trendingTableView.reloadData()
         }
     }

@@ -21,10 +21,6 @@ class SeeAllViewController: UIViewController {
         seeAllTableView.dataSource = self
         seeAllTableView.delegate = self
         
-        Task {
-            self.seeAllMovies = await Movie.popularMoviesAPI()
-            self.seeAllTableView.reloadData()
-        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
