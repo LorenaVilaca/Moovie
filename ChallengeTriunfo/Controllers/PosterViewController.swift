@@ -19,7 +19,7 @@ class PosterViewController: UIViewController {
         }
         self.title = movie.title
         Task {
-            let imageData = await Movie.downloadImageData(withPath: movie.posterPath)
+            let imageData = await Movie.downloadImageData(withPath: movie.posterPath ?? "")
             let image = UIImage(data: imageData) ?? UIImage ()
             posterImage.image = image
         }

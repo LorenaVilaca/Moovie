@@ -33,10 +33,10 @@ extension SeeAllViewController: UITableViewDataSource {
                         image: UIImage())
         
         Task {
-            let imageData = await Movie.downloadImageData(withPath: movie.posterPath)
+            let imageData = await Movie.downloadImageData(withPath: movie.posterPath ?? "")
             let posterImage = UIImage(data: imageData) ?? UIImage ()
             
-            tableCell.setup(title: movie.title, date: String(movie.releaseDate.prefix(4) ?? ""), rating: String(movie.voteAverage), image: posterImage)
+            tableCell.setup(title: movie.title, date: String(movie.releaseDate!.prefix(4) ?? ""), rating: String(movie.voteAverage), image: posterImage)
         }
         return tableCell
     }

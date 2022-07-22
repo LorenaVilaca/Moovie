@@ -18,12 +18,12 @@ extension SearchViewController: UITableViewDataSource {
         
         let movie = searchMovies[indexPath.item]
         
-        searchCell.setup(title: movie.title, date: movie.releaseDate, posterImage: UIImage())
+        searchCell.setup(title: movie.title, date: movie.releaseDate ?? "", posterImage: UIImage())
         
         Task {
             let imageData = await Movie.downloadImageData(withPath: movie.posterPath ?? "")
             let image = UIImage(data: imageData) ?? UIImage()
-            searchCell.setup(title: movie.title, date: movie.releaseDate, posterImage: image)
+            searchCell.setup(title: movie.title, date: movie.releaseDate ?? "", posterImage: image)
             
         }
         return searchCell
